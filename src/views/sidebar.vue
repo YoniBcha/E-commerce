@@ -55,7 +55,7 @@
       </li>
     </ul>
   </div>
-  <div class="home_content">
+  <div class="home_content pb-96">
     <header class="header">
       <nav class="navbar">
         <span><router-link class="nav-link" to="/home">Home</router-link></span>
