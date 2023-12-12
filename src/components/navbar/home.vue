@@ -1,23 +1,233 @@
 <template>
-  <div class="mt-20 ml-10 w-full bg-black">
-    <div class="flex flex-row">
-      <div class="basis-1/4">01</div>
-      <div class="basis-1/4">02</div>
-      <div class="basis-1/2">03</div>
-    </div>
-    <!-- <div class="w-98 h-60 bg-black">
-      <div class="text-white p-10">
+  <div class="flex flex-row w-[1150px] h-[230px] ml-20 mt-28 bg-black">
+    <div class="basis-1/4 text-white ml-5">
+      <div class="flex mt-8 mx-5">
         <i class="bx bxl-apple text-4xl"></i>
-        <span>iPhone 14 Series</span>
+        <p class="pt-2 pl-2">iphone 14 Series</p>
       </div>
-      <div></div>
-      <div></div>
-    </div> -->
+      <div class="mx-5 pl-2 pt-3 text-4xl font-bold">Up to 10% off Voucher</div>
+      <div class="mx-7 mt-3 font-semi underline">
+        <span class="-mt-3">shop Now </span
+        ><span><i class="bx bx-right-arrow-alt ml-3"></i></span>
+      </div>
+    </div>
+    <div class="flex-initial w-96 ml-30 pl-10 pt-6">
+      <img
+        class="transition-transform duration-500 ease-in-out hover:scale-125"
+        src="@/assets/iphone.jpg"
+        alt="no"
+      />
+    </div>
+    <div class="basis-1/2"></div>
+  </div>
+  <div class="ml-20 mt-20">
+    <div class="flex">
+      <div class="bg-red-500 w-3 h-16"></div>
+      <div class="mt-4 ml-5 text-2xl text-red-700">Today’s</div>
+    </div>
+    <!-- this part is time and flash seal part -->
+    <div class="flex">
+      <div class="mt-6 text-4xl font-bold">Flash Sales</div>
+      <div class="flex">
+        <div class="ml-40">
+          <div class="flex justify-between w-[250px]">
+            <span>Days</span>
+            <span>Hours</span>
+            <span>Minutes</span>
+            <span>Seconds</span>
+          </div>
+          <div class="pl-6 text-4xl">{{ countdown }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- input part of the start time -->
+    <div class="form flex mt-8">
+      <div>
+        <label>Days:</label>
+        <input type="number" v-model="days" min="0" @input="resetCountdown" />
+      </div>
+      <div>
+        <label>Hours:</label>
+        <input
+          type="number"
+          v-model="hours"
+          min="0"
+          max="23"
+          @input="resetCountdown"
+        />
+      </div>
+      <div>
+        <label>Minutes:</label>
+        <input
+          type="number"
+          v-model="minutes"
+          min="0"
+          max="59"
+          @input="resetCountdown"
+        />
+      </div>
+      <div>
+        <label>Seconds:</label>
+        <input
+          type="number"
+          v-model="seconds"
+          min="0"
+          max="59"
+          @input="resetCountdown"
+        />
+      </div>
+      <button class="-mt-1" @click="startCountdown">Start Countdown</button>
+    </div>
   </div>
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
+
 export default {
-  name: "HomeView",
+  name: "HomePage",
+  setup() {
+    // Create a ref for the countdown
+    const countdown = ref("");
+    // Create refs for the duration values
+    const days = ref(0);
+    const hours = ref(0);
+    const minutes = ref(0);
+    const seconds = ref(0);
+    // Create a ref for the interval ID
+    const intervalId = ref(null);
+
+    // Function to update the countdown
+    const updateCountdown = () => {
+      if (
+        days.value === 0 &&
+        hours.value === 0 &&
+        minutes.value === 0 &&
+        seconds.value === 0
+      ) {
+        countdown.value = "  0 :  0 : 0 : 0 ";
+        clearInterval(intervalId.value);
+        return;
+      }
+
+      countdown.value = `${days.value}: ${hours.value} : ${minutes.value} : ${seconds.value}`;
+
+      // Decrease the duration values
+      if (seconds.value > 0) {
+        seconds.value--;
+      } else if (minutes.value > 0) {
+        minutes.value--;
+        seconds.value = 59;
+      } else if (hours.value > 0) {
+        hours.value--;
+        minutes.value = 59;
+        seconds.value = 59;
+      } else if (days.value > 0) {
+        days.value--;
+        hours.value = 23;
+        minutes.value = 59;
+        seconds.value = 59;
+      }
+    };
+
+    // Function to start the countdown
+    const startCountdown = () => {
+      clearInterval(intervalId.value);
+      intervalId.value = setInterval(updateCountdown, 1000);
+    };
+
+    // Function to reset the countdown
+    const resetCountdown = () => {
+      clearInterval(intervalId.value);
+      countdown.value = "";
+    };
+
+    // Call the updateCountdown function immediately when the component is mounted
+    onMounted(() => {
+      updateCountdown();
+    });
+
+    return {
+      countdown,
+      days,
+      hours,
+      minutes,
+      seconds,
+      startCountdown,
+      resetCountdown,
+    };
+  },
 };
 </script>
+
+<!-- <script>
+import { ref, onMounted } from "vue";
+
+export default {
+  name: "HomePage",
+  setup() {
+    // Create a ref for the current date and time
+    const currentDateTime = ref("");
+
+    // Function to update the current date and time
+    const updateDateTime = () => {
+      const now = new Date();
+      const formattedDateTime = formatDate(now) + " " + formatTime(now);
+      currentDateTime.value = formattedDateTime;
+    };
+
+    // Format the date as "YYYY-MM-DD"
+    const formatDate = (date) => {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    };
+
+    // Format the time as "HH:MM:SS"
+    const formatTime = (date) => {
+      const hours = String(date.getHours()).padStart(2, "0");
+      const minutes = String(date.getMinutes()).padStart(2, "0");
+      const seconds = String(date.getSeconds()).padStart(2, "0");
+      return `${hours}:${minutes}:${seconds}`;
+    };
+
+    // Call the updateDateTime function immediately when the component is mounted
+    onMounted(() => {
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+    });
+
+    return {
+      currentDateTime,
+    };
+  },
+};
+</script> -->
+<style scoped>
+.form label {
+  font-weight: 500;
+  margin-right: 10px;
+  margin: 4px;
+}
+.form button {
+  background: rgba(0, 0, 0, 0.726);
+  margin-left: 40px;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.form button:hover {
+  background: black;
+}
+input {
+  background: rgba(5, 160, 5, 0.419);
+  color: black;
+  padding: 4px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+</style>
