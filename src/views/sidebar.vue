@@ -27,60 +27,82 @@
       </li>
       <li>
         <a href="#">
-          <i class="bx bx-grid-alt"></i>
-          <span class="link_name">Dashboard</span>
+          <i class="bx bx-female"></i>
+          <span class="link_name">Woman’s Fashion</span>
         </a>
-        <span class="tooltip">Dashboard</span>
+        <span class="tooltip">Woman’s Fashion</span>
       </li>
       <li>
         <a href="#">
-          <i class="bx bx-grid-alt"></i>
-          <span class="link_name">User</span>
+          <i class="bx bx-male"></i>
+          <span class="link_name">Men’s Fashion</span>
         </a>
-        <span class="tooltip">user</span>
+        <span class="tooltip">Men’s Fashion</span>
       </li>
       <li>
         <a href="#">
-          <i class="bx bx-grid-alt"></i>
-          <span class="link_name">Setting</span>
+          <i class="bx bxs-devices"></i>
+          <span class="link_name">Electronics</span>
         </a>
-        <span class="tooltip">setting</span>
+        <span class="tooltip">Electronics</span>
       </li>
       <li>
         <a href="#">
-          <i class="bx bx-grid-alt"></i>
-          <span class="link_name">FileManager</span>
+          <i class="bx bxs-home"></i>
+          <span class="link_name">Home & Lifestyle</span>
         </a>
-        <span class="tooltip">file</span>
+        <span class="tooltip">Home & Lifestyle</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-plus-medical"></i>
+          <span class="link_name">Medicine</span>
+        </a>
+        <span class="tooltip">Medicine</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-cycling"></i>
+          <span class="link_name">Sports & Outdoor</span>
+        </a>
+        <span class="tooltip">Sports & Outdoor</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bxs-baby-carriage"></i>
+          <span class="link_name">Baby’s & Toys</span>
+        </a>
+        <span class="tooltip">Baby’s & Toys</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bxs-coffee"></i>
+          <span class="link_name">Groceries & Pets</span>
+        </a>
+        <span class="tooltip">Groceries & Pets</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-health"></i>
+          <span class="link_name">Health & Beauty</span>
+        </a>
+        <span class="tooltip">Health & Beauty</span>
       </li>
     </ul>
   </div>
   <div class="home_content pb-96">
-    <header class="header">
-      <nav class="navbar">
-        <span><router-link class="nav-link" to="/home">Home</router-link></span>
-        <span
-          ><router-link class="nav-link" to="/contact"
-            >Contact</router-link
-          ></span
-        >
-        <span
-          ><router-link class="nav-link" to="/about">About</router-link></span
-        >
-        <span
-          ><router-link class="nav-link" to="/signup">Signup</router-link></span
-        >
-      </nav>
-    </header>
-    <router-view />
+    <NavView />
   </div>
 </template>
 
 <script>
 import "@/style/sidebar/sidebar.css";
 
+import NavView from "@/global/nav-view.vue";
+
 export default {
   name: "SidebarView",
+  components: { NavView },
   mounted() {
     const btn = document.querySelector("#btn");
     const sidebar = document.querySelector(".sidebar");

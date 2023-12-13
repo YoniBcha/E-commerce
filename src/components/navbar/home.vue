@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row w-[1150px] h-[230px] ml-20 mt-28 bg-black">
+  <div class="flex flex-row h-[230px] ml-10 mt-[11`0px] mr-[90px] bg-black">
     <div class="basis-1/4 text-white ml-5">
       <div class="flex mt-8 mx-5">
         <i class="bx bxl-apple text-4xl"></i>
@@ -79,14 +79,24 @@
       </div>
       <button class="-mt-1" @click="startCountdown">Start Countdown</button>
     </div>
+    <div class="flex w-[1100px] py-10">
+      <CardView />
+      <CardView />
+      <CardView />
+      <CardView />
+    </div>
   </div>
 </template>
 
 <script>
 import { ref, onMounted } from "vue";
 
+import "@/style/navbar/home.css";
+import CardView from "@/global/card.vue";
+
 export default {
   name: "HomePage",
+  components: { CardView },
   setup() {
     // Create a ref for the countdown
     const countdown = ref("");
@@ -161,73 +171,4 @@ export default {
 };
 </script>
 
-<!-- <script>
-import { ref, onMounted } from "vue";
-
-export default {
-  name: "HomePage",
-  setup() {
-    // Create a ref for the current date and time
-    const currentDateTime = ref("");
-
-    // Function to update the current date and time
-    const updateDateTime = () => {
-      const now = new Date();
-      const formattedDateTime = formatDate(now) + " " + formatTime(now);
-      currentDateTime.value = formattedDateTime;
-    };
-
-    // Format the date as "YYYY-MM-DD"
-    const formatDate = (date) => {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, "0");
-      const day = String(date.getDate()).padStart(2, "0");
-      return `${year}-${month}-${day}`;
-    };
-
-    // Format the time as "HH:MM:SS"
-    const formatTime = (date) => {
-      const hours = String(date.getHours()).padStart(2, "0");
-      const minutes = String(date.getMinutes()).padStart(2, "0");
-      const seconds = String(date.getSeconds()).padStart(2, "0");
-      return `${hours}:${minutes}:${seconds}`;
-    };
-
-    // Call the updateDateTime function immediately when the component is mounted
-    onMounted(() => {
-      updateDateTime();
-      setInterval(updateDateTime, 1000);
-    });
-
-    return {
-      currentDateTime,
-    };
-  },
-};
-</script> -->
-<style scoped>
-.form label {
-  font-weight: 500;
-  margin-right: 10px;
-  margin: 4px;
-}
-.form button {
-  background: rgba(0, 0, 0, 0.726);
-  margin-left: 40px;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-  transition: all 0.5s ease;
-}
-.form button:hover {
-  background: black;
-}
-input {
-  background: rgba(5, 160, 5, 0.419);
-  color: black;
-  padding: 4px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-}
-</style>
+<style scoped></style>
