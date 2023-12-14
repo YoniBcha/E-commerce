@@ -30,8 +30,6 @@
         ><i class="bx bx-star text-black"></i
         ><span class="text-gray-600 ml-3">(88)</span>
       </p>
-      <!-- <input type="number" class="quantity-input" min="1" value="1" /> -->
-      <!-- <button class="remove-button">Remove</button> -->
     </div>
     <div class="card-content">
       <button class="remove-button">Add to chart</button>

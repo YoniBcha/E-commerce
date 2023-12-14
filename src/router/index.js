@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import SidebarView from "../views/sidebar.vue";
 import HomeView from "@/components/navbar/home.vue";
 import ContactView from "@/components/navbar/contact.vue";
+import AboutView from "@/components/navbar/about.vue";
 
 const routes = [
   {
@@ -19,15 +20,11 @@ const routes = [
     name: "contact",
     component: ContactView,
   },
-  // {
-  //   path: "/about",
-  //   name: "about",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  // },
+  {
+    path: "/about",
+    name: "about",
+    component: AboutView,
+  },
 ];
 
 const router = createRouter({

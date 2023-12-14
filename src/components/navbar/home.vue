@@ -79,24 +79,52 @@
       </div>
       <button class="-mt-1" @click="startCountdown">Start Countdown</button>
     </div>
-    <div class="flex w-[1100px] py-10">
-      <CardView />
-      <CardView />
-      <CardView />
-      <CardView />
+    <div class="">
+      <swiper
+        :slidesPerView="4"
+        :spaceBetween="0"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper"
+      >
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /></swiper-slide>
+        <swiper-slide><CardView /> </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
 
 <script>
 import { ref, onMounted } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "@/style/style.css";
 
 import "@/style/navbar/home.css";
+
 import CardView from "@/global/card.vue";
 
 export default {
   name: "HomePage",
-  components: { CardView },
+  components: { CardView, Swiper, SwiperSlide },
   setup() {
     // Create a ref for the countdown
     const countdown = ref("");
@@ -159,6 +187,8 @@ export default {
     });
 
     return {
+      modules: [Pagination, Navigation],
+
       countdown,
       days,
       hours,
