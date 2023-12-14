@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row h-[230px] ml-10 mt-[11`0px] mr-[90px] bg-black">
+  <div class="flex flex-row h-[230px] ml-10 mt-[100px] mr-[90px] bg-black">
     <div class="basis-1/4 text-white ml-5">
       <div class="flex mt-8 mx-5">
         <i class="bx bxl-apple text-4xl"></i>
@@ -79,10 +79,12 @@
       </div>
       <button class="-mt-1" @click="startCountdown">Start Countdown</button>
     </div>
+
+    <!-- this part is card slide show -->
     <div class="">
       <swiper
-        :slidesPerView="4"
-        :spaceBetween="0"
+        :slidesPerView="5"
+        :spaceBetween="1"
         :loop="true"
         :pagination="{
           clickable: true,
@@ -105,6 +107,12 @@
         <swiper-slide><CardView /> </swiper-slide>
       </swiper>
     </div>
+    <div class="flex justify-center w-full mb-[50px]">
+      <button class="text-white px-2 py-2 text-xl rounded-sm bg-[#db4444]">
+        View All Products
+      </button>
+    </div>
+    <hr class="mb-[50px] w-full borde-2 border-black" />
   </div>
 </template>
 

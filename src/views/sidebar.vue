@@ -4,16 +4,8 @@
       Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
       <span>shopNow</span>
     </p>
-    <!-- <p class="lan">en</p> -->
   </div>
   <div class="sidebar">
-    <div class="logo_content">
-      <div class="logo">
-        <i class="bx bxl-c-plus-plus"></i>
-        <div class="logo_name">Ecommerce</div>
-      </div>
-      <i class="bx bx-menu" id="btn"></i>
-    </div>
     <ul class="navlist">
       <li>
         <i class="bx bx-search"></i>
@@ -90,8 +82,9 @@
       </li>
     </ul>
   </div>
-  <div class="home_content pb-96">
-    <NavView />
+  <SidebarChild @sidebar-toggle="toggleSidebar" />
+  <div class="home_content">
+    <NavView class="-ml-[-78px]" />
   </div>
 </template>
 
@@ -115,6 +108,12 @@ export default {
     searchBtn.addEventListener("click", () => {
       sidebar.classList.toggle("active");
     });
+  },
+  methods: {
+    toggleSidebar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.classList.toggle("active");
+    },
   },
 };
 </script>

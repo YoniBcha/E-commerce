@@ -1,6 +1,16 @@
 <template>
-  <header class="header">
-    <div class="navbar">
+  <div class="header grid grid-cols-12 bg-[#c8ab7c]">
+    <div
+      class="logo_content flex justify-between items-center col-start-1 col-span-2"
+    >
+      <i
+        class="bx bx-menu text-4xl ml-[30px]"
+        id="btn"
+        @click="toggleSidebar"
+      ></i>
+      <div class="text-2xl font-bold text-[#db4444]">Ecommerce</div>
+    </div>
+    <div class="navbar col-start-3 col-span-5">
       <span><router-link class="nav-link" to="/home">Home</router-link></span>
       <span
         ><router-link class="nav-link" to="/contact">Contact</router-link></span
@@ -10,19 +20,13 @@
         ><router-link class="nav-link" to="/signup">Signup</router-link></span
       >
     </div>
-    <div class="flex">
-      <div class="search-container">
-        <i class="bx bx-search ml-2 -mt-[2px] text-white"></i>
-        <input type="text" placeholder="Search" />
-      </div>
-      <div class="flex flex-col text-2xl my-2 ml-28">
-        <i class="bx bx-heart"></i>
-      </div>
-      <div class="flex flex-col text-2xl my-2 ml-10">
-        <i class="bx bx-cart-alt"></i>
-      </div>
+    <div class="search-container col-start-8 col-span-3">
+      <i class="bx bx-search ml-2 -mt-[2px] text-white"></i>
+      <input type="text" placeholder="Search" />
     </div>
-    <div class="profile flex flex-col text-2xl my-2 ml-10">
+    <div class="profile col-start-11 col-span-2 text-2xl">
+      <i class="bx bx-heart"></i>
+      <i class="bx bx-cart-alt"></i>
       <i
         @click="toggleDropdown"
         class="bx bx-user text-white rounded-full p-2 bg-[#db4444]"
@@ -35,7 +39,7 @@
         </ul>
       </div>
     </div>
-  </header>
+  </div>
   <router-view />
 </template>
 <script>
@@ -47,6 +51,9 @@ export default {
     };
   },
   methods: {
+    toggleSidebar() {
+      this.$emit("sidebar-toggle");
+    },
     toggleDropdown() {
       this.showDropdown = !this.showDropdown;
     },
@@ -55,21 +62,20 @@ export default {
 </script>
 <style scoped>
 .header {
-  padding: 10px 0;
   position: fixed;
   background: white;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: var(--border);
   width: 100%;
+  height: 60px;
   right: 0;
   z-index: 10;
 }
 .header .navbar {
   display: flex;
-  width: 350px;
-  justify-content: space-between;
+  padding-left: 80px;
+  justify-content: space-around;
   font-weight: 500;
 }
 .header .navbar .nav-link {
@@ -79,15 +85,14 @@ export default {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 .header .navbar .nav-link:hover {
   color: #db4444;
   border-bottom: 0.3rem solid #db4444;
   padding-bottom: 0.3rem;
 }
 .search-container {
-  position: relative;
-  margin-left: 50px;
+  display: flex;
+  justify-content: center;
 }
 .search-container .bx-search {
   position: absolute;
@@ -96,6 +101,7 @@ export default {
   font-size: 22px;
 }
 .search-container i {
+  position: fixed;
   line-height: 50px;
   text-align: center;
 }
@@ -115,16 +121,17 @@ input[type="text"]:focus {
 }
 .profile {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
 }
-
 .profile img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
 }
-
 .dropdown {
   position: absolute;
   top: 50px;
@@ -133,23 +140,18 @@ input[type="text"]:focus {
   border: 1px solid rgba(20, 19, 19, 0.644);
   border-radius: 5px;
   padding: 20px;
-  /* display: none; */
 }
-
 .dropdown ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .dropdown li {
   margin-bottom: 10px;
 }
-
 .dropdown li:last-child {
   margin-bottom: 0;
 }
-
 .dropdown a {
   text-decoration: none;
   color: white;

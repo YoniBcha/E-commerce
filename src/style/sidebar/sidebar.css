@@ -53,27 +53,6 @@ body {
 .sidebar.active .link_name {
   opacity: 1;
 }
-.sidebar .logo_content .logo {
-  color: black;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  opacity: 0;
-  transition: all ease 0.5s;
-  pointer-events: none;
-}
-.sidebar.active .logo_content .logo {
-  opacity: 1;
-}
-.logo_content .logo i {
-  font-size: 20px;
-  margin-right: 5px;
-}
-.logo_content .logo .logo_name {
-  font-weight: 600;
-  font-size: 20px;
-}
 .sidebar #btn {
   color: black;
   position: absolute;
@@ -175,7 +154,7 @@ body {
   align-items: center;
   text-decoration: none;
   border-radius: 12px;
-  transition: all ease 0.4s;
+  transition: all ease 0.3s;
   white-space: nowrap;
 }
 
