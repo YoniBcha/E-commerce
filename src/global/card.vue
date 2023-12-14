@@ -32,7 +32,7 @@
       </p>
     </div>
     <div class="card-content">
-      <button class="remove-button">Add to chart</button>
+      <button class="add-button">Add to chart</button>
     </div>
   </div>
 </template>

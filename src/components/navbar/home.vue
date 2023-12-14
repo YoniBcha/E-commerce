@@ -11,10 +11,10 @@
         ><span><i class="bx bx-right-arrow-alt ml-3"></i></span>
       </div>
     </div>
-    <div class="flex-initial w-96 ml-30 pl-10 pt-6">
+    <div class="flex-initial w-[325px] ml-30 pl-10 pt-6">
       <img
         class="transition-transform duration-500 ease-in-out hover:scale-125"
-        src="@/assets/iphone.jpg"
+        src="@/assets/iphone.png"
         alt="no"
       />
     </div>
@@ -112,7 +112,42 @@
         View All Products
       </button>
     </div>
-    <hr class="mb-[50px] w-full borde-2 border-black" />
+    <hr class="mb-[50px] w-full border" />
+    <!-- Categories of items and box-card section -->
+    <div class="mb-[100px]">
+      <div class="flex">
+        <div class="bg-red-500 w-3 h-16"></div>
+        <div class="mt-4 ml-5 text-2xl text-red-700">Categories</div>
+      </div>
+      <div class="text-3xl mt-5 font-bold">Browse By Category</div>
+      <div class="">
+        <swiper
+          :slidesPerView="5"
+          :spaceBetween="1"
+          :loop="true"
+          :pagination="{
+            clickable: true,
+          }"
+          :navigation="true"
+          :modules="modules"
+          class="mySwiper"
+        >
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /></swiper-slide>
+          <swiper-slide><BoxCard /> </swiper-slide>
+        </swiper>
+      </div>
+      <hr class="mb-[50px] w-full border" />
+    </div>
   </div>
 </template>
 
@@ -125,14 +160,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "@/style/style.css";
-
 import "@/style/navbar/home.css";
 
 import CardView from "@/global/card.vue";
+import BoxCard from "@/global/box-card.vue";
 
 export default {
   name: "HomePage",
-  components: { CardView, Swiper, SwiperSlide },
+  components: { CardView, Swiper, SwiperSlide, BoxCard },
   setup() {
     // Create a ref for the countdown
     const countdown = ref("");

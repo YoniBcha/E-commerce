@@ -84,7 +84,7 @@
   </div>
   <SidebarChild @sidebar-toggle="toggleSidebar" />
   <div class="home_content">
-    <NavView class="-ml-[-78px]" />
+    <NavView class="" />
   </div>
 </template>
 

@@ -1,333 +1,79 @@
 <template>
-  <div class="body">
-    <div class="container">
-      <span class="big-circle"></span>
-      <div class="form">
-        <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-            necessitatibus quas iusto!
-          </p>
-          <div class="info">
-            <div class="information">
-              <img src="yonas.jpg" class="icon" alt="no" width="40px" />
-              <p>92 cherry drive uniondale, NY 11553</p>
-            </div>
-            <div class="information">
-              <img src="yonas.jpg" class="icon" alt="no" width="40px" />
-              <p>92 cherry drive uniondale, NY 11553</p>
-            </div>
-            <div class="information">
-              <img src="yonas.jpg" class="icon" alt="no" width="40px" />
-              <p>92 cherry drive uniondale, NY 11553</p>
-            </div>
-          </div>
-
-          <div class="social-media">
-            <p>Contact with us:</p>
-            <div class="social-icon">
-              <a href="#"> <i>Fa</i> </a><a href="#"> <i>Tw</i> </a
-              ><a href="#"> <i>Is</i> </a
-              ><a href="#">
-                <i>In</i>
-              </a>
-            </div>
-          </div>
+  <div class="mx-[80px] mt-[100px] text-2xl font-semibold">Contact</div>
+  <div class="grid grid-rows-4 grid-flow-col grid-cols-12 mx-20">
+    <div class="row-span-2 row-start-1 col-span-5 px-10 pt-10">
+      <div class="mb-5 border-b-2 pb-7">
+        <div class="flex items-center mb-4 pt-5">
+          <i
+            class="bx bxs-phone text-3xl p-2 rounded-full text-white bg-[#db4444]"
+          ></i>
+          <div class="text-2xl font-semibold ml-8">Call To Us</div>
         </div>
-        <div class="contact-form">
-          <span class="circle one"> </span>
-          <span class="circle two"></span>
-          <form action="#">
-            <h3 class="title">Contact Us</h3>
-            <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="username">Username</label>
-              <span>Username</span>
-            </div>
-            <div class="input-container">
-              <input type="email" name="name" class="input" />
-              <label for="email">Email</label>
-              <span>Email</span>
-            </div>
-            <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="username">Phone</label>
-              <span>Phone</span>
-            </div>
-            <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="message">Message</label>
-              <span>Message</span>
-            </div>
-            <input type="submit" value="Send" class="btn" />
-          </form>
+        <div class="">
+          <p class="text-xl mb-1">We are available 24/7, 7 days a week.</p>
+          <p class="text-xl">Phone: +8801611112222</p>
         </div>
       </div>
+      <div class="">
+        <div class="flex items-center mb-5 pt-5">
+          <i
+            class="bx bx-envelope text-3xl p-2 rounded-full text-white bg-[#db4444]"
+          ></i>
+          <div class="text-2xl font-semibold ml-8">Write To US</div>
+        </div>
+        <div class="">
+          <p class="text-xl mb-1">
+            Fill out our form and we will contact you within 24 hours.
+          </p>
+          <p class="text-xl">Emails: customer@exclusive.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="row-span-2 row-start-3 col-span-5 p-10"></div>
+    <div class="col-span-7">
+      <div class="input flex justify-between px-1 py-16">
+        <input type="text" placeholder="your name" />
+        <input type="email" placeholder="your email" />
+        <input type="tel" placeholder="your phone" />
+      </div>
+      <div class="">
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="type your message here "
+        ></textarea>
+        <button
+          class="text-white px-2 py-2 text-xl float-right rounded-lg bg-[#db4444]"
+        >
+          Send Massage
+        </button>
+      </div>
+    </div>
+    <div class="col-span-7 row-span-2">
+      <div class="flex justify-end w-full"></div>
     </div>
   </div>
 </template>
 <script>
-// import "@/style/navbar/contact.css";
 export default {
   name: "ContactView",
 };
 </script>
-
 <style scoped>
-* {
+.input input {
+  height: 40px;
+  background: rgba(202, 196, 196, 0.24);
 }
-body,
-input,
+input {
+  padding: 3px 6px;
+}
 textarea {
-  font-family: "Poppins", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.container {
-  position: absolute;
-  padding: 2rem;
-  background-color: #fafafa;
+  background: rgba(202, 196, 196, 0.24);
+  padding: 10px 10px;
   width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form {
-  max-width: 100%;
-  width: 820px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
-  z-index: 1000px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.contact-form {
-  position: relative;
-  background-color: #1abc9c;
-}
-.circle {
-  border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #149279);
-  position: absolute;
-}
-.circle.one {
-  height: 130px;
-  width: 130px;
-  top: 130px;
-  right: -40px;
-}
-.circle.two {
-  height: 80px;
-  width: 80px;
-  top: 10px;
-  right: 30px;
-}
-.contact-form:before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  background-color: #1abc9c;
-  transform: rotate(45deg);
-  top: 50px;
-  left: -13px;
-}
-form {
-  padding: 2.3rem 2.2rem;
-  z-index: 10;
-  overflow: hidden;
-  position: relative;
-}
-.title {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-.input-container {
-  position: relative;
-  margin: 1rem 0;
-}
-.input {
-  width: 100%;
-  background: none;
-  border: 2px solid #fafafa;
+  margin: 0px 5px;
   outline: none;
-  padding: 0.6rem 1.2rem;
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  border-radius: 6px;
-  transition: 0.3s;
 }
-textarea.input {
-  padding: 0.8rem 1.2rem;
-  min-height: 150px;
-  resize: none;
-  overflow-y: auto;
-}
-.input-container label {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  padding: 0 0.4rem;
-  color: #fafafa;
-  font-size: 0.9rem;
-  font-weight: 500;
-  pointer-events: none;
-  z-index: 1000px;
-  transition: 0.5s;
-}
-.input-container.textarea label {
-  top: 1rem;
-  transform: translateY(0px);
-}
-.btn {
-  padding: 0.6rem 1.3rem;
-  background-color: #fff;
-  border: 2px solid #fafafa;
-  font-size: 0.95rem;
-  color: #1acd9c;
-  line-height: 1;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.4s;
-  margin: 0;
-}
-.btn:hover {
-  background: transparent;
-  color: white;
-}
-.input-container span {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  transform: translateY(-50%);
-  font-size: 0.8rem;
-  padding: 0 0.4rem;
-  color: transparent;
-  pointer-events: none;
-  z-index: 500;
-}
-.input-container span:before,
-.input-container span:after {
-  content: "";
-  position: absolute;
-  width: 10%;
-  transition: 0.3s;
-  height: 5px;
-  background-color: #1abc9c;
-  transition: 0.3s;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-}
-.input-container span:before {
-  left: 50%;
-}
-.input-container span:after {
-  right: 50%;
-}
-.input-container.focus label {
-  top: 0;
-  transform: translateY(-50%);
-  left: 25px;
-  font-size: 0.8rem;
-}
-
-.input-container.focus span:before,
-.input-container.focus span:after {
-  width: 50%;
-  opacity: 1;
-}
-
-.contact-info {
-  padding: 2.3rem 2.2rem;
-  position: relative;
-}
-.contact-info .title {
-  color: #1abc9c;
-}
-
-.contact-info .text {
-  color: #333;
-  margin: 1.5rem 0 2rem 0;
-}
-.information {
-  display: flex;
-  color: #555;
-  margin: 0.7rem 0;
-  align-items: center;
-  font-size: 0.95rem;
-}
-.icon {
-  margin-right: 0.7rem;
-}
-.social-media {
-  padding: 2rem 0 0 0;
-}
-.social-media p {
-  color: #333;
-}
-.social-icon {
-  display: flex;
-  margin-top: 0.5rem;
-}
-.social-icon a {
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
-  background: linear-gradient(45deg, #1abc9c, #149279);
-  color: #fff;
-  text-align: center;
-  margin-right: 0.5rem;
-  line-height: 35px;
-  align-items: center;
-  transition: 0.3s;
-}
-.social-icon a:hover {
-  transform: scale(1.05);
-}
-.contact-info:before {
-  content: "";
-  position: absolute;
-  width: 110px;
-  height: 100px;
-  border: 22px solid #1abc9c;
-  border-radius: 50%;
-  bottom: -77px;
-  right: 50px;
-  opacity: 0.3;
-}
-
-/* .big-circle {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, #1cd4af, #159b80);
-    bottom: 50%;
-    right: 50%;
-    transform: translate(-40%, 38%);
-  }
-  .big-circle:after {
-    content: "";
-    position: absolute;
-    width: 360px;
-    height: 360px;
-    background-color: #fafafa;
-    border-radius: 50%;
-    top: calc(50%-180px);
-    left: calc(50%-180px);
-  }  */
 </style>
