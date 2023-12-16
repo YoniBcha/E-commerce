@@ -117,3 +117,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.fotter {
+  position: relative;
+}
+</style>
