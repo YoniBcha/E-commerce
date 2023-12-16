@@ -14,7 +14,7 @@
 
       <div class="cart-item -mt-[60px]">
         <img
-          src="@/assets/game.png"
+          src="@/assets/bag.png"
           alt="Product Image"
           class="product-image mt-5 ml-4"
         />
@@ -39,6 +39,6 @@
 <script>
 import "@/style/global_css/card.css";
 export default {
-  name: "CardView",
+  name: "BestCellCardView",
 };
 </script>
