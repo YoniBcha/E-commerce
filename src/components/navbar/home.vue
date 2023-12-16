@@ -117,7 +117,7 @@
       </div>
       <hr class="mb-[50px] w-full border" />
       <!-- Categories of items and box-card section -->
-      <div class="mb-[100px]">
+      <div class="mb-[60px]">
         <div class="flex">
           <div class="bg-red-500 w-3 h-16"></div>
           <div class="mt-4 ml-5 text-2xl text-red-700">Categories</div>
@@ -149,7 +149,134 @@
             <swiper-slide><BoxCard /> </swiper-slide>
           </swiper>
         </div>
-        <hr class="mb-[50px] w-full border" />
+        <hr class="w-full border" />
+      </div>
+      <!-- Best Selling Products -->
+      <div class="">
+        <div class="flex justify-between">
+          <div class="">
+            <div class="bg-red-500 w-3 h-16"></div>
+            <div class="-mt-12 ml-5 text-2xl text-red-700">This Month</div>
+          </div>
+          <div class="">
+            <button
+              class="text-white px-4 py-2 text-xl rounded-sm bg-[#db4444] mr-4 mt-5"
+            >
+              View All
+            </button>
+          </div>
+        </div>
+        <div class="text-3xl mt-7 font-bold">Best Selling Products</div>
+        <div class="">
+          <swiper
+            :slidesPerView="5"
+            :spaceBetween="1"
+            :loop="true"
+            :pagination="{
+              clickable: true,
+            }"
+            :navigation="true"
+            :modules="modules"
+            class="mySwiper"
+          >
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /> </swiper-slide>
+          </swiper>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-4 gap-4 bg-black h-76 w-full text-white px-14 py-10 mb-10 rounded-sm"
+      >
+        <div class="col-span-2">
+          <div class="text-[#00cf53] mb-1 text-xl">Categories</div>
+          <div class="text-4xl font-bold mb-2">
+            <p>Enhance Your Music Experience</p>
+          </div>
+          <div class="flex">
+            <div
+              class="bg-white rounded-full w-16 h-16 text-black pl-3 font-bold ml-1"
+            >
+              <span class="pl-2">23</span> <span class="text-sm"> Days</span>
+            </div>
+            <div
+              class="bg-white rounded-full w-16 h-16 text-black pl-3 font-bold ml-1"
+            >
+              <span class="pl-2">05</span> <span class="text-sm"> Hours</span>
+            </div>
+            <div
+              class="bg-white rounded-full w-16 h-16 text-black pl-3 font-bold ml-1"
+            >
+              <span class="pl-2">59</span>
+              <span class="text-sm pr-1"> Minute</span>
+            </div>
+            <div
+              class="bg-white rounded-full w-16 h-16 text-black pl-3 font-bold ml-1 mb-4"
+            >
+              <span class="pl-3">35</span>
+              <span class="text-sm pr-1"> Second</span>
+            </div>
+          </div>
+          <button
+            class="text-white font-semibold ml-1 bg-[#00ff66] px-5 py-2 rounded-lg"
+          >
+            Buy Now!
+          </button>
+        </div>
+        <div class="col-span-2 pl-6">
+          <img src="@/assets/radio.png" class="w-[400px]" alt="no-img" />
+        </div>
+      </div>
+      <div class="">
+        <div class="flex">
+          <div class="bg-red-500 w-3 h-16"></div>
+          <div class="mt-4 ml-5 text-2xl text-red-700">Our Products</div>
+        </div>
+        <div class="text-3xl mt-7 font-bold">Explore Our Products</div>
+        <div class="">
+          <swiper
+            :slidesPerView="5"
+            :grid="{
+              rows: 6,
+            }"
+            :spaceBetween="0"
+            :pagination="{
+              clickable: true,
+            }"
+            :modulese="modulese"
+            class="mySwiper"
+          >
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide
+            ><swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide
+            ><swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide
+            ><swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide
+            ><swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide
+            ><swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide
+            ><swiper-slide><BestCellCardView /></swiper-slide>
+            <swiper-slide><BestCellCardView /></swiper-slide>
+          </swiper>
+        </div>
+        <div class="flex justify-center w-full mb-[50px]">
+          <button class="text-white px-2 py-2 text-xl rounded-sm bg-[#db4444]">
+            View All Products
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -159,6 +286,7 @@
 import { ref, onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper/modules";
+import { Grid } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -168,10 +296,11 @@ import "@/style/navbar/home.css";
 
 import CardView from "@/global/card.vue";
 import BoxCard from "@/global/box-card.vue";
+import BestCellCardView from "@/global/best-sell.vue";
 
 export default {
   name: "HomePage",
-  components: { CardView, Swiper, SwiperSlide, BoxCard },
+  components: { CardView, Swiper, SwiperSlide, BoxCard, BestCellCardView },
   setup() {
     // Create a ref for the countdown
     const countdown = ref("");
@@ -235,6 +364,7 @@ export default {
 
     return {
       modules: [Pagination, Navigation],
+      modulese: [Grid, Pagination],
 
       countdown,
       days,
