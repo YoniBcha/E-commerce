@@ -85,6 +85,7 @@
   <SidebarChild @sidebar-toggle="toggleSidebar" />
   <div class="home_content">
     <NavView class="" />
+    <FooterView />
   </div>
 </template>
 
@@ -92,10 +93,11 @@
 import "@/style/sidebar/sidebar.css";
 
 import NavView from "@/global/nav-view.vue";
+import FooterView from "@/global/footer.vue";
 
 export default {
   name: "SidebarView",
-  components: { NavView },
+  components: { NavView, FooterView },
   mounted() {
     const btn = document.querySelector("#btn");
     const sidebar = document.querySelector(".sidebar");

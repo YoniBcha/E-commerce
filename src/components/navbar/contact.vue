@@ -1,8 +1,11 @@
 <template>
-  <div class="mx-[80px] mt-[100px] text-2xl font-semibold">Contact</div>
-  <div class="grid grid-rows-4 grid-flow-col grid-cols-12 mx-20">
-    <div class="row-span-2 row-start-1 col-span-5 px-10 pt-10">
-      <div class="mb-5 border-b-2 pb-7">
+  <div class="mx-20 mb-10 mt-24 text-2xl font-semibold">Contact</div>
+
+  <div
+    class="grid grid-rows-3 grid-flow-col grid-cols-5 h-[460px] ml-10 mr-20 mb-10"
+  >
+    <div class="row-span-3 row-start-1 col-span-2 px-10 py-3">
+      <div class="mb-5 border-b-2 pb-10">
         <div class="flex items-center mb-4 pt-5">
           <i
             class="bx bxs-phone text-3xl p-2 rounded-full text-white bg-[#db4444]"
@@ -15,7 +18,7 @@
         </div>
       </div>
       <div class="">
-        <div class="flex items-center mb-5 pt-5">
+        <div class="flex items-center pt-5 mb-5">
           <i
             class="bx bx-envelope text-3xl p-2 rounded-full text-white bg-[#db4444]"
           ></i>
@@ -29,30 +32,20 @@
         </div>
       </div>
     </div>
-    <div class="row-span-2 row-start-3 col-span-5 p-10"></div>
-    <div class="col-span-7">
-      <div class="input flex justify-between px-1 py-16">
+
+    <div class="col-span-3 row-span-1 px-5 py-5">
+      <div class="input flex justify-between px-1 py-5 mb-5">
         <input type="text" placeholder="your name" />
         <input type="email" placeholder="your email" />
         <input type="tel" placeholder="your phone" />
       </div>
-      <div class="">
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="type your message here "
-        ></textarea>
-        <button
-          class="text-white px-2 py-2 text-xl float-right rounded-lg bg-[#db4444]"
-        >
-          Send Massage
-        </button>
-      </div>
-    </div>
-    <div class="col-span-7 row-span-2">
-      <div class="flex justify-end w-full"></div>
+
+      <textarea class="h-48" placeholder="type your message here"></textarea>
+      <button
+        class="text-white px-2 py-2 mt-3 text-xl float-right rounded-lg bg-[#db4444]"
+      >
+        Send Massage
+      </button>
     </div>
   </div>
 </template>

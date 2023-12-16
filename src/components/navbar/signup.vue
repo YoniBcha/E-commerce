@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-20 mt-20 mr-32 mb-32">
+  <div class="ml-10 mt-20 mr-32">
     <div class="container rounded-lg" ref="container">
       <div class="forms-container">
         <div class="signin-signup">
@@ -97,8 +97,10 @@
 </template>
 <script>
 import "@/style/navbar/sign_up.css";
+
 export default {
   name: "SignupView",
+  components: {},
   mounted() {
     const container = this.$refs.container;
     const panelsContainer = container.querySelector(".panels-container");

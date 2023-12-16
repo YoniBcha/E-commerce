@@ -24,7 +24,7 @@
     <div class="product-info">
       <h3 class="product-name">HAVIT HV-G92 Gamepad</h3>
       <p class="product-price">$120 <span>$160</span></p>
-      <p class="text-[#e7d1b0]">
+      <p class="text-[#ffad33]">
         <i class="bx bx-star"></i><i class="bx bx-star"></i
         ><i class="bx bx-star"></i><i class="bx bx-star"></i
         ><i class="bx bx-star text-black"></i
