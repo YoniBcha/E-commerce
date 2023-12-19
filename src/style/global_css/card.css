@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 6px;
   width: 180px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: all 0.5s ease;
   margin: 10px 20px;
@@ -17,7 +17,7 @@
 }
 .cart-items {
   padding: 10px;
-  background: #9b41415d;
+  background: #db9b2460;
   display: flex;
   flex-direction: column;
   list-style: none;
