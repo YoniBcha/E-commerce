@@ -1,18 +1,16 @@
 <template>
   <div class="shopping-cart">
-    <ul class="cart-items h-40 bg-red-500">
-      <div class="flex justify-between">
-        <div>
-          <button><slot name="discount-percentage"></slot></button>
-        </div>
-        <!-- heart and eye icon -->
-        <div class="flex flex-col text-2xl my-2 mx-2">
-          <i class="bx bx-heart rounded-full"></i>
-          <i class="bx bx-show rounded-full mt-6"></i>
-        </div>
+    <ul class="cart-items w-[177px] h-40 relative">
+      <div class="absolute top-2 left-2 z-10">
+        <button><slot name="discount-percentage"></slot></button>
+      </div>
+      <!-- heart and eye icon -->
+      <div class="absolute top-2 right-2 flex flex-col text-2xl z-10">
+        <i class="bx bx-heart rounded-full"></i>
+        <i class="bx bx-show rounded-full mt-6"></i>
       </div>
 
-      <div class="cart-item -mt-[60px]">
+      <div class="w-[80%] mx-auto mt-2">
         <slot name="image"></slot>
       </div>
     </ul>
@@ -63,22 +61,12 @@ export default {
   border-radius: 5px;
 }
 .cart-items {
-  padding: 10px;
+  /* padding: 10px; */
   background: #db9b2460;
   display: flex;
   flex-direction: column;
   list-style: none;
   padding-bottom: 20px;
-}
-.cart-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.product-image {
-  width: 60%;
-  margin-left: 20px;
-  margin-top: 10px;
 }
 .product-info {
   padding: 10px;

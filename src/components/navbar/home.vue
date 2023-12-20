@@ -114,7 +114,9 @@
         <div class="mt-4 ml-5 text-2xl text-red-700">Our Products</div>
       </div>
       <div class="text-3xl mt-7 font-bold">Explore Our Products</div>
-      <GridCard class="w-full" />
+      <div class="h-[1064px] w-full">
+        <GridCard />
+      </div>
       <div class="flex justify-center w-full mb-[50px]">
         <button
           class="text-white px-2 py-2 text-xl rounded-sm bg-[#db4444e0] hover:bg-[#db4444] font-semibold transition duration-300 hover:scale-110"
@@ -202,7 +204,7 @@
     </div>
   </div>
 </template>
-
+S-Series Comfort Chair
 <script>
 // import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper/modules";
