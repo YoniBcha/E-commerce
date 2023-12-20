@@ -116,7 +116,7 @@ export default {
         this.gridConfig.rows = 1;
       } else if (window.innerWidth < 480) {
         this.slidesPerView = 3;
-        this.gridConfig.rows = 2;
+        this.gridConfig.rows = 3;
       } else if (window.innerWidth < 768) {
         this.slidesPerView = 5;
         this.gridConfig.rows = 4;

@@ -179,24 +179,30 @@
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-3 gap-4 mb-20 ml-8">
-      <div class="">
-        <div class="ml-24">
-          <i class="bx bxs-car text-4xl border-2 rounded-full p-3"></i>
+    <div class="grid grid-cols-3 gap-4 mb-20 mx-auto">
+      <div class="mx-auto text-center">
+        <div class="">
+          <i
+            class="transition duration-300 bx bxs-car text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white"
+          ></i>
         </div>
         <div class="text-xl font-bold">FREE AND FAST DELIVERY</div>
         <div class="">Free delivery for all orders over $140</div>
       </div>
-      <div class="">
-        <div class="ml-20">
-          <i class="bx bx-headphone text-4xl border-2 rounded-full p-3"></i>
+      <div class="mx-auto text-center">
+        <div class="">
+          <i
+            class="transition duration-300 bx bx-headphone text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white"
+          ></i>
         </div>
         <div class="text-xl font-bold">24/7 CUSTOMER SERVICE</div>
         <div class="">Friendly 24/7 customer support</div>
       </div>
-      <div class="">
-        <div class="ml-20">
-          <i class="bx bxs-shield-minus text-4xl border-2 rounded-full p-3"></i>
+      <div class="mx-auto text-center">
+        <div class="">
+          <i
+            class="transition duration-300 bx bxs-shield-minus text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white"
+          ></i>
         </div>
         <div class="text-xl font-bold">MONEY BACK GUARANTEE</div>
         <div class="">We reurn money within 30 days</div>
