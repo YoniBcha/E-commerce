@@ -1,347 +1,31 @@
 <template>
   <swiper
-    :slidesPerView="slidesPerView"
-    :grid="gridOptions"
-    :direction="swiperDirection"
-    :spaceBetween="swiperSpaceBetween"
-    :pagination="paginationOptions"
+    :slides-per-view="slidesPerView"
+    :grid="gridConfig"
+    :space-between="0"
+    :pagination="{ clickable: true }"
     :modules="modules"
     class="mySwiper"
   >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
+    <swiper-slide v-for="grid_data in grid_datas" :key="grid_data.id">
+      <CardView>
+        <template v-slot:discount-percentage>
+          -{{ grid_data.discount_rate }}%
+        </template>
+        <template v-slot:image>
+          <img
+            :src="grid_data.image_url"
             alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$160</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-40%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/jacket.png"
-            alt="Product Image"
-            class="product-image w-28 mt-1 ml-2"
-        /></template>
-        <template v-slot:product-name>The north coat</template>
-        <template v-slot:product-price>$120</template>
-        <template v-slot:privious-price>$160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-35%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/bag.png"
-            alt="Product Image"
-            class="product-image mt-3 ml-2 w-32"
-        /></template>
-        <template v-slot:product-name>Gucci duffle bag</template>
-        <template v-slot:product-price>$960</template>
-        <template v-slot:privious-price>$1160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-30%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/amp.png"
-            alt="Product Image"
-            class="product-image mt-7 ml-3 w-36"
-        /></template>
-        <template v-slot:product-name>RGB liquid CPU Cooler</template>
-        <template v-slot:product-price>$370</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-25%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/fog.png"
-            alt="Product Image"
-            class="product-image mt-4 ml-4 w-24"
-        /></template>
-        <template v-slot:product-name>Curology Product Set</template>
-        <template v-slot:product-price>$375</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
-            alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$380</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
-            alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$160</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-40%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/jacket.png"
-            alt="Product Image"
-            class="product-image w-28 mt-1 ml-2"
-        /></template>
-        <template v-slot:product-name>The north coat</template>
-        <template v-slot:product-price>$120</template>
-        <template v-slot:privious-price>$160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-35%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/bag.png"
-            alt="Product Image"
-            class="product-image mt-3 ml-2 w-32"
-        /></template>
-        <template v-slot:product-name>Gucci duffle bag</template>
-        <template v-slot:product-price>$960</template>
-        <template v-slot:privious-price>$1160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-30%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/amp.png"
-            alt="Product Image"
-            class="product-image mt-7 ml-3 w-36"
-        /></template>
-        <template v-slot:product-name>RGB liquid CPU Cooler</template>
-        <template v-slot:product-price>$370</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-25%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/fog.png"
-            alt="Product Image"
-            class="product-image mt-4 ml-4 w-24"
-        /></template>
-        <template v-slot:product-name>Curology Product Set</template>
-        <template v-slot:product-price>$375</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
-            alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$380</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
-            alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$160</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-40%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/jacket.png"
-            alt="Product Image"
-            class="product-image w-28 mt-1 ml-2"
-        /></template>
-        <template v-slot:product-name>The north coat</template>
-        <template v-slot:product-price>$120</template>
-        <template v-slot:privious-price>$160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-35%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/bag.png"
-            alt="Product Image"
-            class="product-image mt-3 ml-2 w-32"
-        /></template>
-        <template v-slot:product-name>Gucci duffle bag</template>
-        <template v-slot:product-price>$960</template>
-        <template v-slot:privious-price>$1160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-30%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/amp.png"
-            alt="Product Image"
-            class="product-image mt-7 ml-3 w-36"
-        /></template>
-        <template v-slot:product-name>RGB liquid CPU Cooler</template>
-        <template v-slot:product-price>$370</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-25%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/fog.png"
-            alt="Product Image"
-            class="product-image mt-4 ml-4 w-24"
-        /></template>
-        <template v-slot:product-name>Curology Product Set</template>
-        <template v-slot:product-price>$375</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
-            alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$380</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
-            alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$160</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-40%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/jacket.png"
-            alt="Product Image"
-            class="product-image w-28 mt-1 ml-2"
-        /></template>
-        <template v-slot:product-name>The north coat</template>
-        <template v-slot:product-price>$120</template>
-        <template v-slot:privious-price>$160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-35%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/bag.png"
-            alt="Product Image"
-            class="product-image mt-3 ml-2 w-32"
-        /></template>
-        <template v-slot:product-name>Gucci duffle bag</template>
-        <template v-slot:product-price>$960</template>
-        <template v-slot:privious-price>$1160</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-30%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/amp.png"
-            alt="Product Image"
-            class="product-image mt-7 ml-3 w-36"
-        /></template>
-        <template v-slot:product-name>RGB liquid CPU Cooler</template>
-        <template v-slot:product-price>$370</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-25%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/fog.png"
-            alt="Product Image"
-            class="product-image mt-4 ml-4 w-24"
-        /></template>
-        <template v-slot:product-name>Curology Product Set</template>
-        <template v-slot:product-price>$375</template>
-        <template v-slot:privious-price>$400</template>
-      </CardView></swiper-slide
-    >
-    <swiper-slide
-      ><CardView>
-        <template v-slot:discount-percentage>-20%</template>
-        <template v-slot:image
-          ><img
-            src="@/assets/book-table.png"
-            alt="Product Image"
-            class="product-image mt-2 ml-8 w-20"
-        /></template>
-        <template v-slot:product-name>Small BookSelf</template>
-        <template v-slot:product-price>$380</template>
-        <template v-slot:privious-price>$400</template>
+            class="w-[80%] !h-36 object-contain my-auto mx-auto relative mt-2"
+          />
+        </template>
+        <template v-slot:product-name>{{ grid_data.product_name }}</template>
+        <template v-slot:product-price>
+          ${{ grid_data.product_price }}
+        </template>
+        <template v-slot:previous-price>
+          <span>${{ grid_data.product_price }}</span>
+        </template>
       </CardView></swiper-slide
     >
   </swiper>
@@ -350,6 +34,7 @@
 // import required modules
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Grid, Pagination } from "swiper/modules";
+import { grid_datas } from "@/global/data/grid";
 
 // Import Swiper styles
 import "swiper/css";
@@ -361,7 +46,7 @@ import "@/style/style.css";
 import CardView from "@/global/card/card.vue";
 
 export default {
-  name: "AboutPage",
+  name: "GridView",
   components: {
     Swiper,
     SwiperSlide,
@@ -369,75 +54,90 @@ export default {
   },
   data() {
     return {
-      slidesPerView: 1,
-      gridOptions: {
+      grid_datas: grid_datas,
+      modules: [Grid, Pagination],
+      slidesPerView: 5,
+      gridConfig: {
         rows: 3,
       },
-      swiperDirection: "horizontal",
-      swiperSpaceBetween: 0,
-      paginationOptions: {
-        clickable: true,
-      },
-      modules: [Grid, Pagination], // Add any additional Swiper modules you want to use
     };
   },
-  mounted() {
-    this.initializeSwiper();
-    window.addEventListener("resize", this.initializeSwiper);
-  },
-  beforeUnmount() {
-    window.removeEventListener("resize", this.initializeSwiper);
-  },
   methods: {
-    initializeSwiper() {
-      const windowWidth = window.innerWidth;
-
-      // Define your breakpoints and slidesPerView values here
-      const breakpoints = {
-        0: {
-          slidesPerView: 1,
-        },
-        320: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 4,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-      };
-
-      const sortedBreakpoints = Object.keys(breakpoints)
-        .sort((a, b) => a - b)
-        .reverse();
-
-      let matchedBreakpoint = 0;
-      for (const breakpoint of sortedBreakpoints) {
-        if (windowWidth >= breakpoint) {
-          matchedBreakpoint = breakpoint;
-          break;
-        }
-      }
-
-      this.slidesPerView = breakpoints[matchedBreakpoint].slidesPerView;
-
-      // Reinitialize Swiper
+    initSwiper() {
+      this.updateSwiperConfig();
       this.$nextTick(() => {
-        if (this.$swiper) {
-          this.$swiper.destroy();
-        }
-
-        this.$swiper = new Swiper(".swiper-container", {
+        new Swiper(".mySwiper", {
           slidesPerView: this.slidesPerView,
-          grid: this.gridOptions,
-          direction: this.swiperDirection,
-          spaceBetween: this.swiperSpaceBetween,
-          pagination: this.paginationOptions,
-          modules: this.modules,
+          grid: this.gridConfig,
+          spaceBetween: 0,
+          pagination: {
+            clickable: true,
+          },
+          modules: [Grid, Pagination],
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              grid: {
+                rows: 1,
+              },
+            },
+            480: {
+              slidesPerView: 3,
+              grid: {
+                rows: 2,
+              },
+            },
+            768: {
+              slidesPerView: 5,
+              grid: {
+                rows: 4,
+              },
+            },
+            1024: {
+              slidesPerView: 6,
+              grid: {
+                rows: 5,
+              },
+            },
+            1280: {
+              slidesPerView: 8,
+              grid: {
+                rows: 5,
+              },
+            },
+          },
         });
       });
     },
+    updateSwiperConfig() {
+      // Modify the slidesPerView and gridConfig based on your requirements
+      if (window.innerWidth < 320) {
+        this.slidesPerView = 1;
+        this.gridConfig.rows = 1;
+      } else if (window.innerWidth < 480) {
+        this.slidesPerView = 3;
+        this.gridConfig.rows = 2;
+      } else if (window.innerWidth < 768) {
+        this.slidesPerView = 5;
+        this.gridConfig.rows = 4;
+      } else if (window.innerWidth < 1024) {
+        this.slidesPerView = 6;
+        this.gridConfig.rows = 5;
+      } else if (window.innerWidth < 1280) {
+        this.slidesPerView = 8;
+        this.gridConfig.rows = 5;
+      } else {
+        this.slidesPerView = 5;
+        this.gridConfig.rows = 3;
+      }
+    },
+  },
+  mounted() {
+    this.initSwiper();
+    window.addEventListener("resize", this.updateSwiperConfig);
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.updateSwiperConfig);
   },
 };
 </script>
