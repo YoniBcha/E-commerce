@@ -33,10 +33,8 @@
   </swiper>
 </template>
 <script>
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper/modules";
-import { flash_sales } from "@/global/data/flash-sale";
 
 // Import Swiper styles
 import "swiper/css";
@@ -45,6 +43,7 @@ import "@/style/style.css";
 
 // import required componets
 import CardView from "@/global/card/card.vue";
+import { flash_sales } from "@/global/data/flash-sale";
 
 export default {
   components: {

@@ -114,7 +114,7 @@
         <div class="mt-4 ml-5 text-2xl text-red-700">Our Products</div>
       </div>
       <div class="text-3xl mt-7 font-bold">Explore Our Products</div>
-      <div class="h-[1064px] w-full">
+      <div class="h-[1050px] w-full">
         <GridCard />
       </div>
       <div class="flex justify-center w-full mb-[50px]">
@@ -132,7 +132,7 @@
         <div class="mt-4 ml-5 text-2xl text-red-700">Featured</div>
       </div>
       <div class="text-3xl mt-7 font-bold">New Arrival</div>
-      <div class="grid grid-rows-4 grid-flow-col grid-cols-4 mt-10">
+      <div class="grid grid-rows-4 grid-flow-col grid-cols-4 ml-30 mt-10">
         <div
           class="row-span-4 col-span-2 row-satrt-1 row-end-4 col-start-1 col-end-2 bg-black h-[350px]"
         >
@@ -183,7 +183,7 @@
       <div class="mx-auto text-center">
         <div class="">
           <i
-            class="transition duration-300 bx bxs-car text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white"
+            class="transition duration-300 bx bxs-car text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white hover:cursor-pointer"
           ></i>
         </div>
         <div class="text-xl font-bold">FREE AND FAST DELIVERY</div>
@@ -192,7 +192,7 @@
       <div class="mx-auto text-center">
         <div class="">
           <i
-            class="transition duration-300 bx bx-headphone text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white"
+            class="transition duration-300 bx bx-headphone text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white hover:cursor-pointer"
           ></i>
         </div>
         <div class="text-xl font-bold">24/7 CUSTOMER SERVICE</div>
@@ -201,7 +201,7 @@
       <div class="mx-auto text-center">
         <div class="">
           <i
-            class="transition duration-300 bx bxs-shield-minus text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white"
+            class="transition duration-300 bx bxs-shield-minus text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white hover:cursor-pointer"
           ></i>
         </div>
         <div class="text-xl font-bold">MONEY BACK GUARANTEE</div>
@@ -210,7 +210,6 @@
     </div>
   </div>
 </template>
-S-Series Comfort Chair
 <script>
 // import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper/modules";

@@ -1,9 +1,14 @@
 <template>
   <swiper
-    :slides-per-view="slidesPerView"
-    :grid="gridConfig"
-    :space-between="0"
-    :pagination="{ clickable: true }"
+    :slidesPerView="5"
+    :grid="{
+      rows: 3,
+      gap: 100,
+    }"
+    :spaceBetween="0"
+    :pagination="{
+      clickable: true,
+    }"
     :modules="modules"
     class="mySwiper"
   >
@@ -31,18 +36,20 @@
   </swiper>
 </template>
 <script>
-// import required modules
+// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Grid, Pagination } from "swiper/modules";
-import { grid_datas } from "@/global/data/grid";
 
 // Import Swiper styles
 import "swiper/css";
+
 import "swiper/css/grid";
 import "swiper/css/pagination";
+
 import "@/style/style.css";
 
-// Import components
+// import required modules
+import { Grid, Pagination } from "swiper/modules";
+import { grid_datas } from "@/global/data/grid";
 import CardView from "@/global/card/card.vue";
 
 export default {
@@ -56,88 +63,7 @@ export default {
     return {
       grid_datas: grid_datas,
       modules: [Grid, Pagination],
-      slidesPerView: 5,
-      gridConfig: {
-        rows: 3,
-      },
     };
-  },
-  methods: {
-    initSwiper() {
-      this.updateSwiperConfig();
-      this.$nextTick(() => {
-        new Swiper(".mySwiper", {
-          slidesPerView: this.slidesPerView,
-          grid: this.gridConfig,
-          spaceBetween: 0,
-          pagination: {
-            clickable: true,
-          },
-          modules: [Grid, Pagination],
-          breakpoints: {
-            320: {
-              slidesPerView: 1,
-              grid: {
-                rows: 1,
-              },
-            },
-            480: {
-              slidesPerView: 3,
-              grid: {
-                rows: 2,
-              },
-            },
-            768: {
-              slidesPerView: 5,
-              grid: {
-                rows: 4,
-              },
-            },
-            1024: {
-              slidesPerView: 6,
-              grid: {
-                rows: 5,
-              },
-            },
-            1280: {
-              slidesPerView: 8,
-              grid: {
-                rows: 5,
-              },
-            },
-          },
-        });
-      });
-    },
-    updateSwiperConfig() {
-      // Modify the slidesPerView and gridConfig based on your requirements
-      if (window.innerWidth < 320) {
-        this.slidesPerView = 1;
-        this.gridConfig.rows = 1;
-      } else if (window.innerWidth < 480) {
-        this.slidesPerView = 3;
-        this.gridConfig.rows = 3;
-      } else if (window.innerWidth < 768) {
-        this.slidesPerView = 5;
-        this.gridConfig.rows = 4;
-      } else if (window.innerWidth < 1024) {
-        this.slidesPerView = 6;
-        this.gridConfig.rows = 5;
-      } else if (window.innerWidth < 1280) {
-        this.slidesPerView = 8;
-        this.gridConfig.rows = 5;
-      } else {
-        this.slidesPerView = 5;
-        this.gridConfig.rows = 3;
-      }
-    },
-  },
-  mounted() {
-    this.initSwiper();
-    window.addEventListener("resize", this.updateSwiperConfig);
-  },
-  beforeUnmount() {
-    window.removeEventListener("resize", this.updateSwiperConfig);
   },
 };
 </script>
