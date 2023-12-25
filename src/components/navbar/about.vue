@@ -1,7 +1,7 @@
 <template>
   <div class="ml-20 mb-20 mt-20 mr-16">
     <h1 class="text-2xl font-bold">About</h1>
-    <div class="grid grid-cols-12">
+    <div class="grid grid-cols-12 mb-10">
       <div class="col-span-6 p-28">
         <h1 class="text-2xl font-semibold mb-2">Our Story</h1>
         <p class="mb-2">
@@ -20,6 +20,84 @@
       <div
         class="col-span-6 bg-[url('@/assets/about.png')] bg-center bg-cover"
       ></div>
+    </div>
+
+    <div class="flex justify-around mb-10">
+      <div
+        class="flex flex-col items-center justify-center transition duration-150 ease hover:cursor-pointer hover:bg-[#db4444] hover:text-white border-2 h-44 w-44"
+      >
+        <div class="text-4xl mb-2">
+          <i
+            class="bx bx-building-house border-2 p-2 rounded-full bg-black text-white hover:bg-white hover:text-black"
+          ></i>
+        </div>
+        <div class="text-lg font-semibold">10.5k</div>
+        <div class="text-sm">Sallers active our site</div>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center transition duration-150 ease hover:cursor-pointer hover:bg-[#db4444] hover:text-white border-2 h-44 w-44"
+      >
+        <div class="text-4xl mb-2">
+          <i
+            class="bx bx-dollar-circle border-2 p-2 rounded-full bg-black text-white hover:bg-white hover:text-black"
+          ></i>
+        </div>
+        <div class="text-lg font-semibold">33k</div>
+        <div class="text-sm">Mopnthly Produduct Sale</div>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center transition duration-150 ease hover:cursor-pointer hover:bg-[#db4444] hover:text-white border-2 h-44 w-44"
+      >
+        <div class="text-4xl mb-2">
+          <i
+            class="bx bx-shopping-bag border-2 p-2 rounded-full bg-black text-white hover:bg-white hover:text-black"
+          ></i>
+        </div>
+        <div class="text-lg font-semibold">45.5k</div>
+        <div class="text-sm">Customer active in our site</div>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center transition duration-150 ease hover:cursor-pointer hover:bg-[#db4444] hover:text-white border-2 h-44 w-44"
+      >
+        <div class="text-4xl mb-2">
+          <i
+            class="bx bxs-dollar-circle border-2 p-2 rounded-full bg-black text-white hover:bg-white hover:text-black"
+          ></i>
+        </div>
+        <div class="text-lg font-semibold">25k</div>
+        <div class="text-sm">Anual gross sale in our site</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 mb-20 mx-auto">
+      <div class="mx-auto text-center">
+        <div class="">
+          <i
+            class="transition duration-300 bx bxs-car text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white hover:cursor-pointer"
+          ></i>
+        </div>
+        <div class="text-xl font-bold">FREE AND FAST DELIVERY</div>
+        <div class="">Free delivery for all orders over $140</div>
+      </div>
+      <div class="mx-auto text-center">
+        <div class="">
+          <i
+            class="transition duration-300 bx bx-headphone text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white hover:cursor-pointer"
+          ></i>
+        </div>
+        <div class="text-xl font-bold">24/7 CUSTOMER SERVICE</div>
+        <div class="">Friendly 24/7 customer support</div>
+      </div>
+      <div class="mx-auto text-center">
+        <div class="">
+          <i
+            class="transition duration-300 bx bxs-shield-minus text-4xl border-2 rounded-full p-3 hover:bg-[#db4444] hover:text-white hover:cursor-pointer"
+          ></i>
+        </div>
+        <div class="text-xl font-bold">MONEY BACK GUARANTEE</div>
+        <div class="">We reurn money within 30 days</div>
+      </div>
     </div>
   </div>
 </template>
