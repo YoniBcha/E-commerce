@@ -1,58 +1,34 @@
 <template>
-  <swiper
-    :slidesPerView="5"
-    :grid="{
-      rows: 4,
-    }"
-    :spaceBetween="30"
-    :pagination="{
-      clickable: true,
-    }"
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-    <swiper-slide>Slide 1</swiper-slide> <swiper-slide>Slide 2</swiper-slide
-    ><swiper-slide>Slide 3</swiper-slide> <swiper-slide>Slide 4</swiper-slide
-    ><swiper-slide>Slide 5</swiper-slide> <swiper-slide>Slide 6</swiper-slide
-    ><swiper-slide>Slide 7</swiper-slide> <swiper-slide>Slide 8</swiper-slide
-    ><swiper-slide>Slide 9</swiper-slide>
-  </swiper>
+  <div class="ml-20 mb-20 mt-20 mr-16">
+    <h1 class="text-2xl font-bold">About</h1>
+    <div class="grid grid-cols-12">
+      <div class="col-span-6 p-28">
+        <h1 class="text-2xl font-semibold mb-2">Our Story</h1>
+        <p class="mb-2">
+          Launced in 2015, Exclusive is South Asia’s premier online shopping
+          makterplace with an active presense in Bangladesh. Supported by wide
+          range of tailored marketing, data and service solutions, Exclusive has
+          10,500 sallers and 300 brands and serves 3 millioons customers across
+          the region.
+        </p>
+        <p class="">
+          Exclusive has more than 1 Million products to offer, growing at a very
+          fast. Exclusive offers a diverse assotment in categories ranging from
+          consumer.
+        </p>
+      </div>
+      <div
+        class="col-span-6 bg-[url('@/assets/about.png')] bg-center bg-cover"
+      ></div>
+    </div>
+  </div>
 </template>
 <script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
-import "swiper/css";
-
-import "swiper/css/grid";
-import "swiper/css/pagination";
-
-import "@/style/style.css";
-
-// import required modules
-import { Grid, Pagination } from "swiper/modules";
-
 export default {
   name: "AboutPage",
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
+  components: {},
   setup() {
-    return {
-      modules: [Grid, Pagination],
-    };
+    return {};
   },
 };
 </script>
