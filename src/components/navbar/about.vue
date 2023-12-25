@@ -1,7 +1,7 @@
 <template>
   <div class="ml-20 mb-20 mt-20 mr-16">
-    <h1 class="text-2xl font-bold">About</h1>
-    <div class="grid grid-cols-12 mb-10">
+    <h1 class="text-2xl font-bold mb-5">About</h1>
+    <div class="grid grid-cols-12 mb-20">
       <div class="col-span-6 p-28">
         <h1 class="text-2xl font-semibold mb-2">Our Story</h1>
         <p class="mb-2">
@@ -22,7 +22,7 @@
       ></div>
     </div>
 
-    <div class="flex justify-around mb-10">
+    <div class="flex justify-around mb-20">
       <div
         class="flex flex-col items-center justify-center transition duration-150 ease hover:cursor-pointer hover:bg-[#db4444] hover:text-white border-2 h-44 w-44"
       >
@@ -70,7 +70,41 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-3 gap-4 mb-20 mx-auto">
+    <div class="grid grid-cols-12 gap-4 h-96 mb-40">
+      <div class="col-span-4">
+        <img src="@/assets/boy.png" class="flex justify-center" />
+        <h1 class="text-2xl font-bold mt-2 ml-5">Tom Cruise</h1>
+        <p class="ml-5">Founder & Chairman</p>
+        <div class="flex ml-5">
+          <span><i class="bx bxl-twitter text-2xl"></i></span>
+          <span><i class="bx bxl-instagram ml-2 text-2xl"></i></span>
+          <span><i class="bx bxl-linkedin ml-2 text-2xl"></i></span>
+        </div>
+      </div>
+      <div class="col-span-4">
+        <img src="@/assets/girl1.png" class="flex justify-center" />
+        <h1 class="text-2xl font-bold mt-2 ml-5">Emma Watson</h1>
+        <p class="ml-5">Managing Director</p>
+        <div class="flex ml-5">
+          <span><i class="bx bxl-twitter text-2xl"></i></span>
+          <span><i class="bx bxl-instagram ml-2 text-2xl"></i></span>
+          <span><i class="bx bxl-linkedin ml-2 text-2xl"></i></span>
+        </div>
+      </div>
+      <div class="col-span-4">
+        <img src="@/assets/boss.png" class="flex justify-center" />
+        <h1 class="text-2xl font-bold mt-2 ml-5">Will Smith</h1>
+        <p class="ml-5">Product Designer</p>
+        <div class="flex ml-5">
+          <span><i class="bx bxl-twitter text-2xl"></i></span>
+          <span><i class="bx bxl-instagram ml-2 text-2xl"></i></span>
+          <span><i class="bx bxl-linkedin ml-2 text-2xl"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border mb-10" />
+    <div class="grid grid-cols-3 gap-4 mb-20 w-[1000px] mx-auto">
       <div class="mx-auto text-center">
         <div class="">
           <i
