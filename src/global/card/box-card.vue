@@ -1,5 +1,14 @@
 <template>
-  <div class="card"><i class="bx bx-mobile-alt text-4xl"></i></div>
+  <div
+    class="card transition duration-150 ease hover:cursor-pointer hover:bg-[#db4444] hover:text-white"
+  >
+    <div class="text-4xl">
+      <slot name="icon"></slot>
+    </div>
+    <div class="text-lg font-semibold">
+      <slot name="product-name"></slot>
+    </div>
+  </div>
 </template>
 <script>
 export default {
