@@ -42,7 +42,7 @@ import "swiper/css/pagination";
 import "@/style/style.css";
 
 // import required componets
-import CardView from "@/global/card/card.vue";
+import CardView from "@/global/card/sidebar-card.vue";
 import { women_fashons } from "@/global/data/women_fashon";
 
 export default {

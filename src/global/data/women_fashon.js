@@ -1,4 +1,4 @@
-export const flash_sales = [
+export const women_fashons = [
   {
     id: 1,
     product_name: "HAVIT HV-G92 Gamepad",

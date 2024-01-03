@@ -4,8 +4,8 @@
       class="grid grid-cols-12 h-96 w-full mb-10 bg-[#ebeaeb7a] pl-10 rounded-sm"
     >
       <div class="flex flex-col justify-center col-span-6 h-full w-full">
-        <p class="text-xl mb-3">New Arrival</p>
-        <p class="text-4xl font-bold mb-3">
+        <p class="text-xl pb-8">New Arrival</p>
+        <p class="text-4xl font-bold pb-8">
           Find the Best Fashion <br />
           Style for Women
         </p>
