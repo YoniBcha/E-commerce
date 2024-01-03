@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 ml-20">
+  <div class="mt-20 ml-20 mr-20">
     <div
       class="grid grid-cols-12 h-96 w-full mb-10 bg-[#ebeaeb7a] pl-10 rounded-sm"
     >
