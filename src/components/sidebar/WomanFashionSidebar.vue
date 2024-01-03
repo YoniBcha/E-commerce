@@ -26,10 +26,13 @@
         congue eros
       </p>
     </div>
+    <WomenFashion />
   </div>
 </template>
 <script>
+import WomenFashion from "@/global/swiper/women-fashion.vue";
 export default {
   name: "WomanFashion",
+  components: { WomenFashion },
 };
 </script>
