@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 ml-20 mr-20">
+  <div class="mt-20 ml-20">
     <div
       class="grid grid-cols-12 h-96 w-full mb-10 bg-[#ebeaeb7a] pl-10 rounded-sm"
     >
@@ -7,7 +7,7 @@
         <p class="text-xl pb-8">New Arrival</p>
         <p class="text-4xl font-bold pb-8">
           Find the Best Fashion <br />
-          Style for Women
+          Style for Men
         </p>
         <button
           class="px-4 py-2 bg-[#db4444] text-white text-bold w-40 rounded-lg"
@@ -16,7 +16,7 @@
         </button>
       </div>
       <div class="col-span-6">
-        <img class="h-[400px] pb-5" src="@/assets/wblack.png" alt="no" />
+        <img class="h-[400px] pb-5" src="@/assets/whitemen.png" alt="no" />
       </div>
     </div>
     <div class="mb-5">
@@ -32,7 +32,7 @@
 <script>
 import WomenFashion from "@/global/swiper/women-fashion.vue";
 export default {
-  name: "WomanFashion",
+  name: "MenFashion",
   components: { WomenFashion },
 };
 </script>

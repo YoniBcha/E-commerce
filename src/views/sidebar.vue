@@ -25,12 +25,13 @@
         <span class="tooltip">Woman’s Fashion</span>
       </li>
       <li>
-        <a href="#">
+        <router-link class="router" to="/men-fashion">
           <i class="bx bx-male"></i>
           <span class="link_name">Men’s Fashion</span>
-        </a>
+        </router-link>
         <span class="tooltip">Men’s Fashion</span>
       </li>
+
       <li>
         <a href="#">
           <i class="bx bxs-devices"></i>
