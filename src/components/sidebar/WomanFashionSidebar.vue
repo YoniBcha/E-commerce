@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 ml-20 mr-20">
+  <div class="mt-20 ml-20">
     <div
       class="grid grid-cols-12 h-96 w-full mb-10 bg-[#ebeaeb7a] pl-10 rounded-sm"
     >
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="mb-5">
-      <p class="text-4xl text-center">New Collection</p>
+      <p class="text-4xl text-center mb-3">New Collection</p>
       <p class="text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
         congue eros
