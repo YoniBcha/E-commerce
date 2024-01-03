@@ -5,6 +5,9 @@ import ContactView from "@/components/navbar/contact.vue";
 import SignUpView from "@/components/navbar/signup.vue";
 import AboutView from "@/components/navbar/about.vue";
 
+// side bar content
+import WomanFashionView from "@/components/sidebar/WomanFashionSidebar.vue";
+
 const routes = [
   {
     path: "/sidebar",
@@ -30,6 +33,11 @@ const routes = [
     path: "/about",
     name: "about",
     component: AboutView,
+  },
+  {
+    path: "/Woman-fashion",
+    name: "WomanFashion",
+    component: WomanFashionView,
   },
 ];
 

@@ -160,6 +160,16 @@ body {
   white-space: nowrap;
 }
 
+.sidebar ul li .router {
+  color: black;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all ease 0.3s;
+  white-space: nowrap;
+}
+
 .sidebar.active ul li .link_name {
   opacity: 1;
   pointer-events: auto;
@@ -167,7 +177,7 @@ body {
 .home_content {
   position: absolute;
   height: 100%;
-  width:100%;
+  width: 100%;
   left: 68px;
   transition: all ease 0.5s;
   overflow-y: scroll;
@@ -176,4 +186,3 @@ body {
   width: calc(100%-240px);
   left: 240px;
 }
-

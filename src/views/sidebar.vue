@@ -18,10 +18,10 @@
         <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="#">
+        <router-link class="router" to="/Woman-fashion">
           <i class="bx bx-female"></i>
           <span class="link_name">Woman’s Fashion</span>
-        </a>
+        </router-link>
         <span class="tooltip">Woman’s Fashion</span>
       </li>
       <li>
