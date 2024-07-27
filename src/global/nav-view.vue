@@ -11,7 +11,7 @@
       <div class="text-2xl font-bold text-[#db4444]">Ecommerce</div>
     </div>
     <div class="navbar col-start-3 col-span-5">
-      <span><router-link class="nav-link" to="/home">Home</router-link></span>
+      <span><router-link class="nav-link" to="/">Home</router-link></span>
       <span
         ><router-link class="nav-link" to="/contact">Contact</router-link></span
       >

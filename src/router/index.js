@@ -16,7 +16,7 @@ const routes = [
     component: SidebarView,
   },
   {
-    path: "/home",
+    path: "/",
     name: "home",
     component: HomeView,
   },
